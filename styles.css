@@ -1,0 +1,102 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(-45deg, #111, #222, #333, #111);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #0ff;
+  margin-top: 5vh;
+}
+
+.typing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.highlight {
+  color: #0ff;
+  font-weight: bold;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  background: #0ff;
+  color: #111;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px #0ff;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #0ff;
+}
+
+/* Tools section */
+.tool-section {
+  margin-top: 2rem;
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tool {
+  padding: 0.6rem 1.2rem;
+  background: #111;
+  border: 2px solid #0ff;
+  border-radius: 15px;
+  color: #0ff;
+  box-shadow: 0 0 8px #0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tool:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #0ff;
+}
+
+/* Hidden links shown on click */
+.hidden {
+  display: none;
+  margin-top: 2rem;
+}
+
+#links a {
+  color: #0ff;
+  text-decoration: none;
+}
